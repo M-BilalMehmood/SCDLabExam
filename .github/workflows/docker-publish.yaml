@@ -24,7 +24,7 @@ jobs:
 
       - name: Build and push api-gateway
         run: |
-          docker build -f ./api-gateway/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:latest ./api-gateway
+          docker build -f ./Cafe_Management_System/api-gateway/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:latest ./Cafe_Management_System/api-gateway
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:latest
 
       - name: Build and push menu-service
