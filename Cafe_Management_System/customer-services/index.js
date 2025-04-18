@@ -5,7 +5,7 @@ const port = 3005;
 
 app.use(express.json());
 
-// MongoDB connection
+// MongoDB connection function with retry logic
 const connectMongo = async () => {
   let retries = 5;
   while (retries > 0) {

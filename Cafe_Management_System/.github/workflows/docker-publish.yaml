@@ -1,4 +1,4 @@
-name: Build Docker Images for all microservices and push to Docker Hub
+name: Build Docker Images and push to Docker Hub for all microservices
 
 on:
   push:
