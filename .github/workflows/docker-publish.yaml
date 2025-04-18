@@ -29,27 +29,25 @@ jobs:
 
       - name: Build and push menu-service
         run: |
-          docker build -f ./menu-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/menu-service:latest ./menu-services
+          docker build -f ./Cafe_Management_System/menu-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/menu-service:latest ./Cafe_Management_System/menu-services
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/menu-service:latest
 
       - name: Build and push order-service
         run: |
-          docker build -f ./order-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/order-service:latest ./order-services
+          docker build -f ./Cafe_Management_System/order-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/order-service:latest ./Cafe_Management_System/order-services
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/order-service:latest
 
       - name: Build and push payment-service
         run: |
-          docker build -f ./payment-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/payment-service:latest ./payment-services
+          docker build -f ./Cafe_Management_System/payment-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/payment-service:latest ./Cafe_Management_System/payment-services
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/payment-service:latest
 
       - name: Build and push inventory-service
         run: |
-          docker build -f ./inventory-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/inventory-service:latest ./inventory-services
+          docker build -f ./Cafe_Management_System/inventory-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/inventory-service:latest ./Cafe_Management_System/inventory-services
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/inventory-service:latest
 
       - name: Build and push customer-service
         run: |
-          docker build -f ./customer-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/customer-service:latest ./customer-services
+          docker build -f ./Cafe_Management_System/customer-services/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/customer-service:latest ./Cafe_Management_System/customer-services
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/customer-service:latest
-
-      
